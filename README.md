@@ -2,12 +2,12 @@
 This code downloads historical data (1 minute candles) and backtest an easy strategy based on two ewma crossing.
 
 # Getting Started
-1.	Installation process
+1.	Installation process \n
 Use virtual environment with python 3.8+.
 If you need help with virtual env here is a great explenation https://realpython.com/python-virtual-environments-a-primer/.
-2.	Software dependencies
+2.	Software dependencies \n
 Install dependencies by running `pip install -r requirements.txt`
-3.	Running backtesting
+3.	Running backtesting \n
 ``` python
 if __name__ == "__main__":
     # Choose your market (works best with perpetual futures - ending "-PERP")
