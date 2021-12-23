@@ -14,14 +14,17 @@ if __name__ == "__main__":
     market = 'BTC-PERP'
     # Data will be downloaded from 2019-08-01 00:00:00+00:00 by default
     download_data.main(market=market)
-    # You can set the following parameters when creating a Simulation instance
-    # market -> the selected market
-    # print_from -> you can choose a date from '2019-08-01 00:00:00+00:00'
-    # print_to -> you can limit the end of the range (same date format as print_from)
-    # fee -> set in decimal number (e.g., 0.07% = 0.0007)
-    # interval_s -> slow ewma in minutes (e.g., 120 = 2 hours)
-    # interval_f -> fast ewma in minutes (e.g., 120 = 2 hours)
-    # leverage -> if leverage <= 1 there is no leverage
+    '''
+    You can set the following parameters when creating a Simulation instance
+    
+    market (str): the selected market (e.g., 'ETH-PERP')
+    print_from (str): you can choose a date from '2019-08-01 00:00:00+00:00'
+    print_to (str): you can limit the end of the range (same date format as print_from)
+    fee (float): set in decimal number (e.g., 0.07% = 0.0007)
+    interval_s (int): slow ewma in minutes (e.g., 120 = 2 hours)
+    interval_f (int): fast ewma in minutes (e.g., 120 = 2 hours)
+    leverage (int): if leverage <= 1 there is no leverage
+    '''
     sim = Simulation(market=market, print_from='2019-08-01 00:00:00+01:00', fee=0.0006, interval_s=4320, interval_f=240, leverage=1)
     # Prepare data
     sim.data()
