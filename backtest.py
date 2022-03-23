@@ -159,7 +159,7 @@ class Simulation(object):
                 break
 
         self.cum_rel_profit = round(self.profit / self.beg_portfolio * 100, 2)
-        self.hodl_profit = self.leverage * (self.simulation_points[-1]['close'] / self.simulation_points[0]['close'] - 1)
+        self.hodl_profit = (self.simulation_points[-1]['close'] / self.simulation_points[0]['close'] - 1)
 
         print(f'Number of trades {self.count}.')
         print(f'Absolute profit {self.profit}.')
